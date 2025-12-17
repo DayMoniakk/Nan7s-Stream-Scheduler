@@ -11,31 +11,34 @@ No confusion possible: the schedule will be displayed in your own timezone !
 
 ## Info
 
-Built using the front-end framework [Svelte](https://svelte.dev/).
+Built using the front-end framework [Vue.js](https://vuejs.org/).
 
-By default the project is setup to be deployed to [Netlify](https://www.netlify.com/).
+This is the new and updated version 2 rebuilt from the ground up.
 
-
-## Known Issues
-
-Looks terrible on smaller screens like smartphones but I can't be bothered right now.
+The previous version was messy and I didn't felt like working with Svelte again (I despise Svelte 5).
 
 
 ## Run Locally
-Install dependencies
+Install dependencies:
 
 ```bash
   npm install
 ```
 
-Start the server
+Start the development server:
 
 ```bash
-  npm run --dev --open
+  npm run dev
 ```
 
-Build for Netlify
+Build:
 
 ```bash
   npm run build
+```
+
+Preview the build version:
+
+```bash
+  npm run preview
 ```

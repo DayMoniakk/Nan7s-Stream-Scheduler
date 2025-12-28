@@ -1,5 +1,6 @@
 import type { DayData } from "./Interfaces/DayData";
 import type { StreamData } from "./Interfaces/StreamData";
+import { GetMonthByID } from "./Utils";
 
 var plannedStreams = new Map<number, StreamData[]>();
 var dayData = new Map<number, DayData>();
@@ -52,7 +53,8 @@ export function generateSchedule(): boolean {
                 }
             }
             else {
-                result += `${data.dayName}, ${data.monthName} ${data.dayNumber} - ${offlineText}\n\n`;
+                const streamDate = new Date(data.date.getFullYear(), data.date.getMonth(), data.date.getDate());
+                result += `${data.dayName}, ${GetMonthByID(streamDate.getMonth() + 1)} ${streamDate.getDate()} - ${offlineText}\n\n`;
             }
         }
 

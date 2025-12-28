@@ -33,15 +33,16 @@ function getDayName(index: number): string {
 
   let name = GetDayOfTheWeekByID(targetDay);
   let month = GetMonthByID(startDate.value.getMonth() + 1);
+  let targetDate = new Date(startDate.value.getFullYear(), startDate.value.getMonth(), startDate.value.getDate() + index - 1);
 
   updateDayData(index, {
     dayName: name,
     monthName: month,
     dayNumber: startDate.value.getDate() + index - 1,
-    date: new Date(startDate.value.getFullYear(), startDate.value.getMonth(), startDate.value.getDate() + index - 1)
+    date: targetDate
   });
 
-  return name + ", " + month + " " + (startDate.value.getDate() + index - 1);
+  return `${name}, ${GetMonthByID(targetDate.getMonth() + 1)} ${targetDate.getDate()}`;
 }
 
 function handleGenerateSchedule() {

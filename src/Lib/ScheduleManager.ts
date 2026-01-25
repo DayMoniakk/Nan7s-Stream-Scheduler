@@ -6,7 +6,7 @@ var plannedStreams = new Map<number, StreamData[]>();
 var dayData = new Map<number, DayData>();
 
 export function initScheduleManager() {
-    for (let i = 0; i < 7; i++) {
+    for (let i = 0; i < 8; i++) {
         plannedStreams.set(i, []);
     }
 

@@ -47,7 +47,7 @@ function handleRemoveStream(event: CustomEvent<StreamRemovedEvent>) {
         <div class="day-title">{{ dayName }}</div>
         <div class="controls">
             <input type="time" ref="streamTime" value="20:00">
-            <input type="text" placeholder="Stream title" ref="streamTitle">
+            <input type="text" placeholder="Stream title" ref="streamTitle" v-on:keyup.enter="handleAddStream">
             <button class="btn" v-on:click="handleAddStream"><img src="@/Assets/icon_add.png" alt="add icon"></button>
             <button class="btn btn-off" v-on:click="handleSetDayOff"><img src="@/Assets/icon_sleep.png" alt="day off icon"></button>
         </div>
